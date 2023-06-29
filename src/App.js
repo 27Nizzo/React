@@ -1,25 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  return <div className="App">
+
+    <div>
+      <User name = "Afonso" age = {19} mail = "afonso.martins8282@gmail.com"/>
+      <User name = "Rodrigo" age = {24} mail = "rodriradical@gmail.com"/>
+      <User name = "Nicole" age = {56} mail = "nicolecampos@gmail.com"/>
+    </div>
+  </div>
+}
+
+const props = {
+  name: "Afonso",
+  age: 19,
+  mail: "afonso.martins8282@gmail.com"
+}
+
+//Componentes começam sempre por letra maiuscula
+const User = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>{props.name}</h1>
+      <h2>{props.age}</h2>
+      <h3>{props.mail}</h3>
     </div>
   );
 }
+
 
 export default App;
